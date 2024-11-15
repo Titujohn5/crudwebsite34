@@ -1,0 +1,9 @@
+<h1>{% if item %} update item{% else %}create item{% endif %}</h1>
+<form action=""  method="post">
+    {% csrf_token %}
+    <label for="">Name:</label>
+    <input type="text" name="name" id="name">description>
+    <textarea name="description" id="description"></textarea>
+     <button type="submit" >save</button>
+</form>
+<a href="{% url 'item_list' %}">back to list</a>
